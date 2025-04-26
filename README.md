@@ -1,4 +1,4 @@
-# 🚦 Network Script (bash)
+# 🚦 NetInterfaceViewer (bash)
 
 **Auteur** : MRMALBOOSTONE  
 **But** : Afficher la configuration réseau d’une interface choisie, en validant la saisie et sans caractères spéciaux.  
@@ -32,5 +32,5 @@
 ## 🚀 Usage
 
 ```bash
-chmod +x networkscript.sh
-./networkscript.sh
+chmod +x netinterfaceviewer.sh
+./netinterfaceviewer.sh
