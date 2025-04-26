@@ -16,14 +16,14 @@
 #Afficher la configuration réseau
 clear
 echo -e "\e[31m"
-echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 echo -e "\e[0m"
 read -rp "Quel est l'interface réseau que vous souhaitez consulter ?  " saisi
 while [[ "$saisi" =~ [^[:alnum:]] ]]
 do
 		clear
 		echo -e "\e[31m"
-		echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+		echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 		echo "Veuillez ne pas saisir de caractère non alphanumérique"
 		echo -e "\e[0m"
 		read -rp "Quel est l'interface réseau que vous souhaitez consulter ?  " saisi
@@ -32,7 +32,7 @@ do
 		do
 			clear
 			echo -e "\e[31m"
-			echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+			echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 			echo "L'interface saisie n'existe pas, veuillez saisir une interface valide"
 			echo -e "\e[0m"
 			read -rp "Quel est l'interface réseau que vous souhaitez consulter ?  " saisi
@@ -43,7 +43,7 @@ while [ "$?" = "1" ]
 do
 		clear
 		echo -e "\e[31m"
-		echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+		echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 		echo "L'interface saisie n'existe pas, veuillez saisir une interface valide"
 		echo -e "\e[0m"
 		read -p "Quel est l'interface réseau que vous souhaitez consulter ?  " saisi
@@ -52,7 +52,7 @@ do
 		do
 			clear
 			echo -e "\e[31m"
-			echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+			echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 			echo "Veuillez ne pas saisir de caractère non alphanumérique"
 			echo -e "\e[0m"
 			read -rp "Quel est l'interface réseau que vous souhaitez consulter ?  " saisi
@@ -61,7 +61,7 @@ do
 done
 clear
 echo -e "\e[31m"
-echo "------------------------------------NETWORK SCRIPT--------------------------------------"
+echo "------------------------------------NET INTERFACE VIEWER--------------------------------------"
 echo -e "\e[0m"
 echo "Configuration réseau de l'interface : $saisi"
 echo
