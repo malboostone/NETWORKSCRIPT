@@ -1,10 +1,36 @@
-# NETWORKSCRIPT
-A script to display the network configuration of a chosen interface
+# 🚦 Network Script (bash)
 
-Bonjour à tous,
-Dans la cadre d'un exercice lors de ma formation j'ai dû réaliser un code simple pour afficher la configuration d'une interface réseau choisie 
-et ce en utilisant des opérateurs logiques pour faire la même opération à chaque fois. Le dernier exercice concerné les boucles avec l'opérateur While notamment.
-J'aimerais beaucoup avoir des retours sur le code que j'ai réalisé, si c'est possible de faire plus simple, plus optimisé, tout en gardant l'efficacité du code
-qui prévoit toutes les conditions possibles.
+**Auteur** : MRMALBOOSTONE  
+**But** : Afficher la configuration réseau d’une interface choisie, en validant la saisie et sans caractères spéciaux.  
 
-Merci à tous :)
+---
+
+## ⚙️ Fonctionnement
+
+1. **Bannière colorée**  
+   - Affiche un header rouge pour signaler le début du script.  
+2. **Saisie sécurisée**  
+   - Invite l’utilisateur à entrer le nom d’une interface (ex. `eth0`, `wlan0`).  
+   - Vérifie que le nom ne contient que des caractères alphanumériques.  
+   - Vérifie que le fichier `/etc/sysconfig/network-scripts/ifcfg-<interface>` existe.  
+   - En cas d’erreur, réaffiche la bannière et un message explicite, puis redemande.  
+3. **Affichage de la configuration**  
+   - Exécute `ifconfig <interface>`.  
+   - Supprime la ligne de titre pour ne montrer que les détails (IP, masque, MAC…).  
+   - Affiche une ligne de séparation rouge en fin de sortie.  
+
+---
+
+## 🔧 Personnalisation
+
+- Chemin des configs : `/etc/sysconfig/network-scripts/ifcfg-<iface>` (adaptable selon ta distro).  
+- Couleurs et style de la bannière modifiables via les variables `RED` et `RESET`.  
+- Pour remplacer `ifconfig`, utilise `ip addr show <iface>` si nécessaire.  
+
+---
+
+## 🚀 Usage
+
+```bash
+chmod +x networkscript.sh
+./networkscript.sh
