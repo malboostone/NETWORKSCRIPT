@@ -1,6 +1,6 @@
 # 🚦 NetInterfaceViewer (bash)
 
-**Auteur** : MRMALBOOSTONE  
+**Auteur** : malboostone
 **But** : Afficher la configuration réseau d’une interface choisie, en validant la saisie et sans caractères spéciaux.  
 
 ---
